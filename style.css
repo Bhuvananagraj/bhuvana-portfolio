@@ -6,7 +6,7 @@ body{
     padding:0;
     height:100%;
     width:100%;
-    overflow:hidden;
+    overflow-x:hidden;
 }
 nav{
     height:60px;
@@ -107,4 +107,62 @@ section .title{
     text-transform: uppercase;
     text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4);
 }
-   
+ #home .btn-group{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+ }  
+ .btn{
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 4px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+
+ }
+ .btn-solid{
+    background-color: #6a5acd;
+    color: #fff;
+ }
+ .btn-outline{
+    background-color: transparent;
+    color: #6a5acd;
+    border: 1px solid #6a5acd;
+ }
+
+ .btn-toggler{
+    padding: 10px 12px;
+    display: none;
+    cursor: pointer;
+ }
+/*mesdia query mobile responsive css*/
+ @media screen and (max-width: 796px){
+    .menu{
+        display: none;
+    }
+    .btn-toggler{
+        display: block;
+    }
+    .menu.active{
+        display: flex;
+        width:50vw;
+        background-color: #222;
+        position: fixed;
+        left: 0;
+        top:60px;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;   
+     }
+     .menu.active a{
+        width:100%;
+        text-align:center;
+     }
+
+
+ }
+    
+ 
